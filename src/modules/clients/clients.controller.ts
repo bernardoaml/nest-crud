@@ -11,7 +11,9 @@ import {
   import { ClientsService } from './clients.service';
   import { CreateClientDto } from './dtos/create-client.dto';
   import { UpdateClientDto } from './dtos/update-client.dto';
-  
+  import { UseGuards } from '@nestjs/common';
+  import { AuthGuard } from '@nestjs/passport';
+  @UseGuards(AuthGuard('jwt'))
   @Controller('clients')
   export class ClientsController {
     constructor(private readonly clientsService: ClientsService) {}

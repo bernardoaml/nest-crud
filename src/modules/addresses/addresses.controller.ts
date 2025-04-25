@@ -11,7 +11,10 @@ import {
   import { AddressesService } from './addresses.service';
   import { CreateAddressDto } from './dtos/create-address.dto';
   import { UpdateAddressDto } from './dtos/update-address.dto';
-  
+  import { UseGuards } from '@nestjs/common';
+  import { AuthGuard } from '@nestjs/passport';
+
+  @UseGuards(AuthGuard('jwt'))
   @Controller('addresses')
   export class AddressesController {
     constructor(private readonly addressesService: AddressesService) {}
