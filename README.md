@@ -38,3 +38,10 @@ Seu objetivo é gerenciar clientes e seus endereços com autenticação protegid
 ```bash
 git clone https://github.com/seu-usuario/client-address-api.git
 cd client-address-api
+```
+### 2. Instale as dependências
+
+```bash
+npm install
+```
+
