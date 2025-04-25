@@ -1,98 +1,109 @@
+<h1 align="center">Client Address API</h1>
+
+<p align="center">Uma API RESTful construída com <a href="https://nestjs.com" target="_blank">NestJS</a> para gerenciar clientes e seus endereços com autenticação via JWT.</p>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <img src="https://img.shields.io/badge/NestJS-Backend-red.svg" alt="NestJS Badge" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-blue.svg" alt="PostgreSQL Badge" />
+  <img src="https://img.shields.io/badge/Prisma-ORM-green.svg" alt="Prisma Badge" />
+  <img src="https://img.shields.io/badge/JWT-Auth-yellow.svg" alt="JWT Badge" />
+  <img src="https://img.shields.io/badge/Swagger-Docs-blueviolet.svg" alt="Swagger Badge" />
+  <img src="https://img.shields.io/badge/Tested%20with-Jest-brightgreen.svg" alt="Jest Badge" />
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## ✨ Sobre o Projeto
 
-## Description
+A **Client Address API** é uma aplicação backend desenvolvida como parte de um desafio técnico.  
+Seu objetivo é gerenciar clientes e seus endereços com autenticação protegida por JWT, validações com DTOs, e documentação completa com Swagger.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## 🚀 Tecnologias Utilizadas
 
-```bash
-$ npm install
-```
+- ✅ NestJS
+- ✅ PostgreSQL
+- ✅ Prisma ORM
+- ✅ JWT (JSON Web Token)
+- ✅ Swagger (OpenAPI 3.0)
+- ✅ Jest para testes unitários
 
-## Compile and run the project
+---
+
+## 📦 Como Rodar o Projeto Localmente
+
+### 1. Clone o repositório
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/seu-usuario/client-address-api.git
+cd client-address-api
 ```
-
-## Run tests
+### 2. Instale as dependências
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm install
 ```
 
-## Deployment
+### 3. Configure o arquivo .env
+Substitua usuario, senha e nome_do_banco pelos seus dados locais.
+```bash
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco?schema=public"
+JWT_SECRET="sua_chave_jwt"
+JWT_EXPIRES_IN="3600s"
+```
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 4. Configurar o Banco de Dados
+Rode as migrations com Prisma:
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npx prisma migrate dev --name init
+```
+(Para abrir o Prisma Studio:)
+```bash
+npx prisma studio
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### 5. Iniciar a Aplicação
+```bash
+npm run start:dev
+```
+A aplicação estará disponível em:  http://localhost:3000
 
-## Resources
+### 6. Rodando Testes🧪
+Execute os testes unitários:
 
-Check out a few resources that may come in handy when working with NestJS:
+```bash
+npm run test
+```
+Para gerar o relatório de cobertura:
+```bash
+npm run test:cov
+```
+O relatório de cobertura será gerado na pasta /coverage/.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### 7. Acesso ao Swagger
+Acesse a documentação Swagger em:
+```bash
+http://localhost:3000/api
+```
+<h2>🔐 Credenciais para Teste de Autenticação</h2>
 
-## Support
+<p>Para testar as rotas protegidas no Swagger, utilize o seguinte login:</p>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```json
+{
+  "email": "admin@email.com",
+  "password": "123456"
+}
+```
+<ul> <li>Acesse <code>POST /auth/login</code> no Swagger.</li> <li>Envie o JSON acima para obter um <strong>access_token</strong>.</li> <li>Clique no botão <strong>Authorize</strong> no topo da página.</li> <li>Preencha com o token obtido no formato: <code>Bearer seu_token_aqui</code>.</li> <li>Após autorizado, todas as rotas protegidas estarão liberadas para teste.</li> </ul> 
 
-## Stay in touch
+<h1>Funcionalidades disponíveis:</h1>
+<p>Fazer login (/auth/login)</p> 
+<p>Obter token JWT</p>
+<p>Autorizar no botão "Authorize" do Swagger</p>
+<p>Testar todas as rotas protegidas</p>
+<p>Visualizar exemplos de payloads para requests</p>
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+<h2>👨‍💻 Autor</h2> <p align="center"> <strong>Bernardo Andrade M. e Lima</strong><br/> Teste Técnico - Desenvolvedor Backend (NestJS) </p> 
