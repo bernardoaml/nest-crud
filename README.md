@@ -45,3 +45,11 @@ cd client-address-api
 npm install
 ```
 
+### 3. Configure o arquivo .env
+Substitua usuario, senha e nome_do_banco pelos seus dados locais.
+```bash
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco?schema=public"
+JWT_SECRET="sua_chave_jwt"
+JWT_EXPIRES_IN="3600s"
+```
+
