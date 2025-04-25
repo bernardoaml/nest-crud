@@ -53,3 +53,32 @@ JWT_SECRET="sua_chave_jwt"
 JWT_EXPIRES_IN="3600s"
 ```
 
+### 4. Configurar o Banco de Dados
+Rode as migrations com Prisma:
+
+```bash
+npx prisma migrate dev --name init
+```
+(Para abrir o Prisma Studio:)
+```bash
+npx prisma studio
+```
+
+### 5. Iniciar a Aplicação
+```bash
+npm run start:dev
+```
+A aplicação estará disponível em:  http://localhost:3000
+
+###🧪 Rodar os Testes
+Execute os testes unitários:
+
+```bash
+npm run test
+```
+Para gerar o relatório de cobertura:
+```bash
+npm run test:cov
+```
+O relatório de cobertura será gerado na pasta /coverage/.
+
