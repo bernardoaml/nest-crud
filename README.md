@@ -82,3 +82,15 @@ npm run test:cov
 ```
 O relatório de cobertura será gerado na pasta /coverage/.
 
+### 7. Acesso ao Swagger
+Acesse a documentação Swagger em:
+```bash
+http://localhost:3000/api
+```
+Funcionalidades disponíveis:
+Fazer login (/auth/login)
+Obter token JWT
+Autorizar no botão "Authorize" do Swagger
+Testar todas as rotas protegidas
+Visualizar exemplos de payloads para requests
+
