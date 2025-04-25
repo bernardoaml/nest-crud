@@ -87,7 +87,7 @@ Acesse a documentação Swagger em:
 ```bash
 http://localhost:3000/api
 ```
-Funcionalidades disponíveis:
+<h1>Funcionalidades disponíveis:</h1>
 <p>Fazer login (/auth/login)</p> 
 <p>Obter token JWT</p>
 <p>Autorizar no botão "Authorize" do Swagger</p>
