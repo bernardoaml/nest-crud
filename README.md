@@ -94,3 +94,4 @@ http://localhost:3000/api
 <p>Testar todas as rotas protegidas</p>
 <p>Visualizar exemplos de payloads para requests</p>
 
+<h2>👨‍💻 Autor</h2> <p align="center"> <strong>Bernardo Andrade M. e Lima</strong><br/> Teste Técnico - Desenvolvedor Backend (NestJS) </p> ```
