@@ -70,7 +70,7 @@ npm run start:dev
 ```
 A aplicação estará disponível em:  http://localhost:3000
 
-###🧪 Rodar os Testes
+### 6. Rodando Testes🧪
 Execute os testes unitários:
 
 ```bash
