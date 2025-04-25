@@ -96,8 +96,9 @@ http://localhost:3000/api
   "email": "admin@email.com",
   "password": "123456"
 }
-<ul> <li>Acesse <code>POST /auth/login</code> no Swagger.</li> <li>Envie o JSON acima para obter um <strong>access_token</strong>.</li> <li>Clique no botão <strong>Authorize</strong> no topo da página.</li> <li>Preencha com o token obtido no formato: <code>Bearer seu_token_aqui</code>.</li> <li>Após autorizado, todas as rotas protegidas estarão liberadas para teste.</li> </ul> 
 ```
+<ul> <li>Acesse <code>POST /auth/login</code> no Swagger.</li> <li>Envie o JSON acima para obter um <strong>access_token</strong>.</li> <li>Clique no botão <strong>Authorize</strong> no topo da página.</li> <li>Preencha com o token obtido no formato: <code>Bearer seu_token_aqui</code>.</li> <li>Após autorizado, todas as rotas protegidas estarão liberadas para teste.</li> </ul> 
+
 <h1>Funcionalidades disponíveis:</h1>
 <p>Fazer login (/auth/login)</p> 
 <p>Obter token JWT</p>
