@@ -88,9 +88,9 @@ Acesse a documentação Swagger em:
 http://localhost:3000/api
 ```
 Funcionalidades disponíveis:
-Fazer login (/auth/login)
-Obter token JWT
-Autorizar no botão "Authorize" do Swagger
-Testar todas as rotas protegidas
-Visualizar exemplos de payloads para requests
+<p>Fazer login (/auth/login)</p> 
+<p>Obter token JWT</p>
+<p>Autorizar no botão "Authorize" do Swagger</p>
+<p>Testar todas as rotas protegidas</p>
+<p>Visualizar exemplos de payloads para requests</p>
 
